@@ -11,9 +11,31 @@
     <main>
       <section id="container-signup">
         <h2>Cadastro</h2>
-        <form action="/login" method="GET">
+        <form method="GET">
+          <div class="container-input">
+            <label for="name-id">Nome</label>
+            <input type="text" name="name" id="name-id" />
+          </div>
+          <div class="container-input">
+            <label for="email-id">E-mail</label>
+            <input type="email" name="email" id="email-id" />
+          </div>
+          <div class="container-input">
+            <label for="password-id">Senha</label>
+            <input type="password" name="password" id="password-id" />
+          </div>
+          <div class="container-input">
+            <label for="confirm-password-id">Confirmar senha</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirm-password-id"
+            />
+          </div>
+
           <div class="container-input">
             <label for="interest">Interesse</label>
+            <!-- Colocando "multiple" permite selecionar varias options -->
             <select name="interest" id="interest">
               <option value="" selected>Selecione</option>
               <option value="chocolate">Chocolate</option>
@@ -31,9 +53,47 @@
               <label for="premium">Premium</label>
             </div>
           </div>
-
-          <input type="submit" value="Login" />
-          <a href="./cadastro.html">Não possui conta? Cadastre-se </a>
+          <div class="container-input">
+            <label for="comment-id">Deixa seu comentário</label>
+            <textarea name="comment" id="comment-id"></textarea>
+          </div>
+          <div class="container-input">
+            <label for="birthdate-id">Data de nascimento</label>
+            <input
+              type="date"
+              name="birthdate"
+              id="birthdate-id"
+              min="2022-02-01"
+              max="2022-04-05"
+            />
+          </div>
+          <div class="container-input">
+            <label for="avatar-id">Escolha um avatar</label>
+            <input
+              type="file"
+              name="avatar"
+              id="avatar-id"
+              accept=".png,.jpg,.jpeg,.pdf"
+              multiple
+            />
+          </div>
+          <div class="container-input">
+            <div class="container-checkbox">
+              <input type="checkbox" name="agree" id="agree-id" required />
+              <label for="agree-id">Li e concordo com os termo</label>
+            </div>
+            <div class="container-checkbox">
+              <input type="checkbox" name="newsletter" id="newsletter-id" />
+              <label for="newsletter-id"
+                >Deseja receber notícias por e-mail?</label
+              >
+            </div>
+          </div>
+          <!-- 
+          <button type="submit">Cadastro</button>
+          <button type="reset">Limpar campos</button> -->
+          <input type="submit" value="Cadastro" />
+          <a href="./">Login</a>
         </form>
       </section>
     </main>
